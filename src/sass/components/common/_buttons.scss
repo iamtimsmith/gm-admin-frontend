@@ -1,0 +1,25 @@
+input[type="submit"],
+.button,
+button {
+  position: relative;
+  font-size: 1.4rem;
+  padding: 10px 30px;
+  cursor: pointer;
+  &:after {
+    content: "";
+    display: block;
+    background: #000;
+    opacity: 0;
+    @include cover;
+    @include transition;
+  }
+  &:hover {
+    &:after {
+      opacity: 0.2;
+    }
+  }
+  &.primary {
+    background: $primary;
+    color: $light;
+  }
+}

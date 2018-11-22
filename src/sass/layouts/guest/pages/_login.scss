@@ -1,0 +1,11 @@
+.login {
+  @include container;
+  form {
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    input {
+      margin: 10px 0;
+    }
+  }
+}

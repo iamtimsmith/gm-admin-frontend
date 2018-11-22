@@ -1,0 +1,28 @@
+nav {
+  background: $primary;
+  color: $light;
+  div {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      a {
+        font-size: 2rem;
+        color: $light;
+        text-decoration: none;
+      }
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        a {
+          padding: 10px;
+          color: $light;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
