@@ -1,15 +1,16 @@
 import React, { Component } from "react";
-import jwt_decode from "jwt-decode";
 import axios from "axios";
-import setAuthToken from "../common/AuthToken";
+import { Link, withRouter } from "react-router-dom";
 import TextField from "../common/TextField";
 
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: "",
       email: "",
       password: "",
+      password2: "",
       errors: {}
     };
     this.onChange = this.onChange.bind(this);
@@ -23,23 +24,15 @@ class Login extends Component {
   onSubmit(e) {
     e.preventDefault();
     const userData = {
+      name: this.state.name,
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
+      password1: this.state.password2
     };
 
     axios
-      .post("/api/users/login", userData)
-      .then(res => {
-        // Save to local storage
-        const { token } = res.data;
-        localStorage.setItem("jwtToken", token);
-        // Set token to Auth header
-        setAuthToken(token);
-        // Decode token to get user data
-        const decoded = jwt_decode(token);
-        // Set current user
-        this.props.onLogin(decoded);
-      })
+      .post("/api/users/register", userData)
+      .then(res => this.props.history.push("/login"))
       .catch(err => {
         this.setState({
           errors: err.response.data
@@ -49,9 +42,17 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="login">
-        <h1>Login</h1>
+      <div className="register">
+        <h1>Register</h1>
         <form noValidate onSubmit={this.onSubmit}>
+          <TextField
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={this.state.name}
+            onChange={this.onChange}
+            error={this.state.errors.name}
+          />
           <TextField
             type="text"
             name="email"
@@ -68,10 +69,21 @@ class Login extends Component {
             onChange={this.onChange}
             error={this.state.errors.password}
           />
-          <button className="primary">Login</button>
+          <TextField
+            type="password"
+            name="password2"
+            placeholder="Password Confirm"
+            value={this.state.password2}
+            onChange={this.onChange}
+            error={this.state.errors.password2}
+          />
+          <button className="primary">Register</button>
+          <p>
+            Have an account? <Link to="/login">Log In</Link>
+          </p>
         </form>
       </div>
     );
   }
 }
-export default Login;
+export default withRouter(Login);

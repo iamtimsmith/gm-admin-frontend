@@ -1,5 +1,7 @@
 .guest {
   @import "./navbar";
   @import "./pages/home";
+  @import "./pages/documentation";
   @import "./pages/login";
+  @import "./pages/register";
 }

@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "jwt-decode": "^2.2.0",
     "node-sass": "^4.10.0",
     "normalize.css": "^8.0.1",
     "react": "^16.6.3",
@@ -25,5 +27,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "proxy": "http://localhost:4000"
 }
