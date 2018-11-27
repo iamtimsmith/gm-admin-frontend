@@ -4,6 +4,7 @@ button {
   position: relative;
   font-size: 1.4rem;
   padding: 10px 30px;
+  border-radius: 2px;
   cursor: pointer;
   &:after {
     content: "";
@@ -20,6 +21,10 @@ button {
   }
   &.primary {
     background: $primary;
+    color: $light;
+  }
+  &.red {
+    background: $red;
     color: $light;
   }
 }

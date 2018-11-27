@@ -1,0 +1,47 @@
+.display {
+  border-left: $light-border;
+  padding: 2rem;
+  width: 80%;
+  overflow: scroll;
+  & > h1 {
+    margin: 0;
+  }
+  .display-buttons {
+    text-align: right;
+    button {
+      color: $mid-grey;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      opacity: 0.8;
+      padding: 1rem 1.5rem;
+      @include transition;
+      &:after {
+        background: none;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .content {
+    img {
+      max-width: 80%;
+      display: block;
+      margin: 2rem auto;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 2.2rem;
+    }
+    p,
+    li {
+      font-size: 1.6rem;
+    }
+  }
+}

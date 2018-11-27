@@ -1,0 +1,41 @@
+ul.list {
+  list-style: none;
+  padding: 0;
+  width: 20%;
+  overflow: scroll;
+  li {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    border-top: $light-border;
+    cursor: pointer;
+    @include transition;
+    h3 {
+      margin: 0;
+    }
+    .fa {
+      color: $mid-grey;
+      margin-right: 1rem;
+    }
+    &:hover {
+      background: $light-grey;
+    }
+    &:nth-child(1) {
+      cursor: default;
+      span {
+        &:nth-child(1) {
+          cursor: pointer;
+        }
+        &:nth-child(2) {
+          color: $mid-grey;
+        }
+      }
+    }
+    &:nth-child(1),
+    &:nth-child(2) {
+      border-top: none;
+    }
+    &:nth-child(2) {
+      color: $mid-grey;
+    }
+  }
+}

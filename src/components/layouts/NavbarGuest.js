@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../images/d20.png";
 
 const NavbarGuest = () => (
   <nav>
     <div>
       <p>
-        <Link to="/">Logo</Link>
+        <Link to="/">
+          <img src={Logo} alt="GM Admin" />
+        </Link>
       </p>
       <ul>
         <li>

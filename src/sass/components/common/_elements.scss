@@ -1,0 +1,31 @@
+html {
+  font-size: 10px;
+  body {
+    font-size: 1.8rem;
+    color: $dark-grey;
+    h1 {
+      font-size: 4.5rem;
+    }
+    h2 {
+      font-size: 3.8rem;
+    }
+    h3 {
+      font-size: 3.2rem;
+    }
+    h4 {
+      font-size: 2.8rem;
+    }
+    h5 {
+      font-size: 2.4rem;
+      font-weight: 400;
+    }
+    p,
+    li {
+      font-size: 2rem;
+      line-height: 2.8rem;
+    }
+    small {
+      font-size: 1.6rem;
+    }
+  }
+}

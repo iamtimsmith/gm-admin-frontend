@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import jwt_decode from "jwt-decode";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import setAuthToken from "../common/AuthToken";
 import TextField from "../common/TextField";
 
@@ -39,6 +40,7 @@ class Login extends Component {
         const decoded = jwt_decode(token);
         // Set current user
         this.props.onLogin(decoded);
+        this.props.history.push("/");
       })
       .catch(err => {
         this.setState({
@@ -69,6 +71,9 @@ class Login extends Component {
             error={this.state.errors.password}
           />
           <button className="primary">Login</button>
+          <p>
+            Don't have an account yet? <Link to="/register">Sign up</Link>
+          </p>
         </form>
       </div>
     );

@@ -1,0 +1,8 @@
+.user {
+  margin-left: 6rem;
+  @import "./navbar";
+  @import "./pages/dashboard";
+  @import "./notebook/notebook";
+  @import "./pages/settings";
+  @import "./pages/delete-account";
+}

@@ -1,12 +1,18 @@
 input[type="text"],
 input[type="password"],
+input[type="email"],
 textarea,
 select {
   font-size: 1.8rem;
   width: 100%;
   padding: 5px;
   box-shadow: none;
+  box-sizing: border-box;
   &.error {
     border: 1px solid $red;
+  }
+  &:disabled {
+    background: $light-grey;
+    border: $light-border;
   }
 }

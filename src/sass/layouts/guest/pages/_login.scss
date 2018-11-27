@@ -4,9 +4,16 @@
     display: block;
     margin: 0 auto;
     max-width: 600px;
+    input {
+      border: $light-border;
+      padding: 1rem;
+      &.error {
+        border: 1px solid $red;
+      }
+    }
     div {
       margin: 10px 0;
-      p {
+      small {
         color: $red;
         font-size: 1.2rem;
         margin-top: 0.3rem;
@@ -14,6 +21,13 @@
     }
     button {
       margin-top: 1rem;
+    }
+    p {
+      font-size: 1.4rem;
+      a {
+        color: $red;
+        text-decoration: none;
+      }
     }
   }
 }

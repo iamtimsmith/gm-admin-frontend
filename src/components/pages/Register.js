@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, withRouter } from "react-router-dom";
 import TextField from "../common/TextField";
 
-class Login extends Component {
+class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,13 +27,16 @@ class Login extends Component {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password,
-      password1: this.state.password2
+      password2: this.state.password2
     };
 
     axios
       .post("/api/users/register", userData)
-      .then(res => this.props.history.push("/login"))
+      .then(res => {
+        this.props.history.push("/login");
+      })
       .catch(err => {
+        console.log(err);
         this.setState({
           errors: err.response.data
         });
@@ -86,4 +89,4 @@ class Login extends Component {
     );
   }
 }
-export default withRouter(Login);
+export default withRouter(Register);

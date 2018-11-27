@@ -1,0 +1,23 @@
+.settings {
+  h1 {
+    margin: 1.5rem;
+  }
+  div {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    input {
+      padding: 1rem;
+    }
+  }
+  .delete-button {
+    max-width: 700px;
+    margin: 16rem auto 0;
+    text-align: center;
+    a {
+      background: $red;
+      border: none;
+      color: $light;
+      text-decoration: none;
+    }
+  }
+}

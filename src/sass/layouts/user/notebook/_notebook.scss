@@ -1,0 +1,13 @@
+@import "./list";
+@import "./display";
+@import "./edit";
+
+.notebook {
+  border-top: $light-border;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 6rem;
+  right: 0;
+  bottom: 0;
+}

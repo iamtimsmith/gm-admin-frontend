@@ -1,6 +1,14 @@
 import React from "react";
 
-const TextField = ({ type, name, placeholder, value, error, onChange }) => (
+const TextField = ({
+  type,
+  name,
+  placeholder,
+  value,
+  error,
+  onChange,
+  disabled
+}) => (
   <div>
     <input
       type={type}
@@ -9,8 +17,9 @@ const TextField = ({ type, name, placeholder, value, error, onChange }) => (
       value={value}
       onChange={onChange}
       className={error ? "error" : ""}
+      disabled={disabled}
     />
-    <p>{error}</p>
+    <small>{error}</small>
   </div>
 );
 

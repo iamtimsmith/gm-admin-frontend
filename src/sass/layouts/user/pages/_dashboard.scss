@@ -1,0 +1,15 @@
+.dashboard {
+  h1 {
+    margin: 1.5rem;
+  }
+  p {
+    @include container;
+    margin-top: 3rem;
+  }
+  .action {
+    margin: 5rem 1.5rem 1.5rem;
+    padding: 5rem 2rem;
+    border-top: $light-border;
+    text-align: center;
+  }
+}

@@ -2,14 +2,13 @@
 @import "./variables";
 @import "./mixins";
 
-// Layouts
-@import "./layouts/guest/layout";
-
 // Common
+@import "./components/common/elements";
 @import "./components/common/typography";
 @import "./components/common/inputs";
 @import "./components/common/buttons";
+@import "./components/common/modal";
 
-html {
-  font-size: 10px;
-}
+// Layouts
+@import "./layouts/guest/layout";
+@import "./layouts/user/layout";
